@@ -1,0 +1,53 @@
+package com.rambler.model;
+
+public class Task {
+
+    private int id;
+
+    private String nameTask;
+
+    private String description;
+
+    public Task(int id, String nameTask, String description) {
+        this.id = id;
+        this.nameTask = nameTask;
+        this.description = description;
+    }
+
+    public Task() {}
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNameTask() {
+        return nameTask;
+    }
+
+    public void setNameTask(String nameTask) {
+        this.nameTask = nameTask;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "id=" + id +
+                ", nameTask='" + nameTask + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
+
+}
