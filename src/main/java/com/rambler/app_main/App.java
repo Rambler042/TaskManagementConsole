@@ -41,9 +41,8 @@ public class App {
                     taskRepository.saveTask(tasksList);
                     break;
                 case 2:
+                    tasksList = (ArrayList<Task>) taskRepository.getAllTask();
                     menu.viewing(tasksList);
-                    System.out.print("Введите любое число чтобы вернуться -> ");
-                    actionUser = sc.nextInt();
                     System.out.println(separator);
                     break;
                 case 3:
