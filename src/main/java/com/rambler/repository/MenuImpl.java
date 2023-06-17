@@ -1,4 +1,4 @@
-package com.rambler.menu;
+package com.rambler.repository;
 
 import com.rambler.model.Task;
 import org.springframework.stereotype.Component;
@@ -70,11 +70,6 @@ public class MenuImpl implements Menu{
         task.setDescription(desc);
 
         return task;
-    }
-
-    @Override
-    public void delete(ArrayList<Task> taskList, int id) {
-        taskList.remove(id-1);
     }
 
 

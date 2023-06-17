@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component("taskRepository")
-public class TaskRepositoryImpl implements TaskRepository{
+public class TaskWorkWithFileImpl implements TaskWorkWithFile {
 
     private static final String FILE_PATH = "tasks.txt";
     private static final String FILE_PATH_SYSTEM = "taskSystem.txt";
@@ -30,7 +30,7 @@ public class TaskRepositoryImpl implements TaskRepository{
         } catch (IOException ex){
             ex.printStackTrace();
         }
-        try (FileWriter writer = new FileWriter(FILE_PATH_SYSTEM, false)){
+        try (FileWriter writer = new FileWriter(FILE_PATH_SYSTEM)){
             for (Task task : taskList){
                 writer.write(task.getId() + "_" + task.getNameTask() + "_" + task.getDescription() + ";");
             }
@@ -40,7 +40,7 @@ public class TaskRepositoryImpl implements TaskRepository{
     }
 
     @Override
-    public List<Task> getAllTask() {
+    public ArrayList<Task> getAllTask() {
         try (FileReader reader = new FileReader(FILE_PATH_SYSTEM)){
             int c;
             StringBuilder textFile = new StringBuilder();

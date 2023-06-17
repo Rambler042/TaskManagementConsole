@@ -1,4 +1,4 @@
-package com.rambler.menu;
+package com.rambler.repository;
 
 import com.rambler.model.Task;
 
@@ -13,6 +13,4 @@ public interface Menu {
     public void viewing(ArrayList<Task> taskList);
 
     public Task update(ArrayList<Task> taskList, int id);
-
-    public void delete(ArrayList<Task> taskList, int id);
 }
